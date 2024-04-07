@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+ :root {
+  --text-dark: #0c0a09;
+  --background: #f7fafb;
+  --color-rouge:#F95049;
+  --text-light: #78716c;
+  --white: #ffffff;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  
+}
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: var(--white);
+}
+
+header, nav, section{
+  padding: 10px 8%;
+  margin-bottom: 40px;
+}
+a{
+  text-decoration: none;
+}
+.home{  
+  min-height: 80vh;
+  background: url("../images/alex-haney-CAhjZmVk5H4-unsplash.jpg");
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+  width: 100%;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-rouge);
+  transition: 0.5s;
+  z-index: 100;
+}
+.logo{
+ color: var(--white);
+ font-weight: bold;
+ font-size: 20px;
+ text-decoration: none;
+}
+.logo span{
+  color: var(--bg-nav);
+  font-size: 40px;
+}
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+}
+ul li a{
+  color: var(--white);
+  font-weight: 700;
+  position: relative;
+  font-size: 18px;
+}
+ul li a:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  z-index: 1;
+  background-color: var(--white);
+  height: 4px;
+  width: 0%;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+ul li a:hover:after{
+  width: 100%;
+}
+
+.home-page-content{
+  position: absolute;
+  bottom: 80px;
+}
+.home-page-content p{
+  color: var(--white);
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.home-page-content h1{
+  margin-bottom: 30px;
+  color: var(--white);
+  font-size: 40px;
+}
+.btn{
+  display: inline-block;
+  background-color: var(--color-rouge);
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  font-size: 18px;
+  color: var(--white);
+  padding: 10px 15px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color: var(--text-dark);
+  color: var(--white);
+}
+.home-page-content span{
+    color: var(--color-rouge);
+   
+}
+.img-box{
+  position: absolute;
+  top: 100px;
+  right: 5%;
+}
+.img-box img{border-radius: 6px;
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+}
+/* ============================== Section A Propos===================================*/
+.propos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.col50 h2{
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.col50 p{
+  color: var(--text-light)
+}
+.col50 span{
+  color: var(--color-rouge);
+  font-weight: 700;
+}
+.col50 .textpropos{
+  font-size: 18px;
+  line-height: 30px;
+}
+.savoir-plus{
+  margin-top: 20px;
+}
+.about-image{
+  overflow: hidden;
+  width: 450pcx;
+  height: 300px;
+}
+.about-image img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  z-index: -100;
+  border-radius: 5px;
+  animation: infinite animation1;
+  animation-duration: 50s;
+}
+@keyframes animation1 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(2);
+  }
+}
+
+/* ============================== Section Menu===================================*/
+.qpt{
+  text-align: center;
+}
+.qpt h2{
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  margin-bottom: 40px;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================== Section item menu===================================*/
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px; /*  espace entre les grid---------*/
+}
+.container .item{
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .item img{
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.container .item img:hover{
+  transform: scale(1.1);
+ 
+}
+.item .float{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 10px;
+}
+.item .rouge{
+  color: var(--color-rouge);
+}
+.item .center{
+  text-align: center;
+  margin-bottom: 18px;
+
+}
+.item .commande{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+/* ============================== Section Footer===================================*/
+footer{
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  padding: 10px 8%;
+  padding-top: 30px;
+}
+.flex-footer{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.flex-footer p{
+  line-height: 2;
+  font-size: 18px;
+}
+.flex-footer .column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-footer h4{
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.flex-footer a{
+  font-size: 18px;
+  color: var(--text-light);
+  line-height: 2;
+}
+.flex-footer a:hover{
+ color: var(--white);
+}
+.footer-social {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.droit{
+  text-align: center;
+  margin-top: 25px;
+  border-top: 2px solid #1c1c1d;
+  padding: 20px 0;
+}
+.openbtn{
+  display: none
+}
+.closebtn{
+  display: none
+}
